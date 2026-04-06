@@ -1,0 +1,15 @@
+{
+  "name": "tobacco-station-site",
+  "version": "1.0.0",
+  "description": "Mobile-first site for TOBACCO STATION Smoke Shop",
+  "scripts": {
+    "minify:js": "terser js/main.js -c -m -o js/main.min.js",
+    "minify:css": "cleancss -o css/style.min.css css/style.css",
+    "build": "npm run minify:js && npm run minify:css && node build.js",
+    "dev": "npx http-server build -p 8080 --silent"
+  },
+  "devDependencies": {
+    "terser": "^5.20.0",
+    "clean-css-cli": "^5.6.0"
+  }
+}
